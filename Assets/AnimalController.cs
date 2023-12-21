@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimalController : MonoBehaviour
 {
     private Rigidbody rb;
-    private float force = 100f;
+    private float force = 5f;
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class AnimalController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * force * Time.deltaTime, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * force, ForceMode.Impulse);
         }
     }
 }
